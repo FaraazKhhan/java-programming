@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class A {
+    Scanner sc = new Scanner(System.in);    // creating Scanner object
 
-    static void userResponse(){
-        Scanner sc = new Scanner(System.in);    // creating Scanner object
+    public void userResponse(){
 
         System.out.print("Do you like my program (Y/N) : ");
         char response = sc.next().charAt(0);    // input char
@@ -16,24 +16,9 @@ public class A {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Hello!");
-
-        System.out.print("Enter your name: ");
-
-        String name = sc.nextLine();
-
-        int favNumber = 0;
-        System.out.print("Enter your favourite number: ");
-        favNumber = sc.nextInt();
-
-        System.out.println("You just entered: " + name + " and " + favNumber);
-
-        int diff = favNumber - 10;
-        System.out.println("Difference between my favourite number 10 and your " + favNumber + "= " + diff);
-
-        userResponse();
+    public void displayMessage(){
+        System.out.print("Enter a message: ");
+        String msg = sc.nextLine();
+        System.out.println(msg);
     }
 }
